@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout dengan DIV dan CSS</title>
+    <style>
+        /* Reset dasar dan pengaturan font */
+        body {
+            margin: 0;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            background-color: #f0f2f5;
+        }
+
+        /* DIV pembungkus utama */
+        .wrapper {
+            display: flex;
+            flex-direction: column; /* Mengatur semua elemen di dalamnya tersusun vertikal */
+            min-height: 100vh; /* Tinggi wrapper minimal setinggi layar */
+        }
+
+        /* DIV untuk Header */
+        .header {
+            background-color: #4A90E2; /* Biru cerah */
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* DIV untuk menampung konten utama dan sidebar */
+        .main-content {
+            display: flex; /* Kunci: Membuat konten dan sidebar sejajar */
+            flex: 1; /* Membuat area ini mengisi ruang kosong yang tersisa */
+            padding: 20px;
+            gap: 20px; /* Memberi jarak antara konten dan sidebar */
+        }
+
+        /* DIV untuk konten artikel */
+        .content {
+            flex: 3; /* Mengambil 3 bagian dari ruang yang tersedia */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        /* DIV untuk sidebar */
+        .sidebar {
+            flex: 1; /* Mengambil 1 bagian dari ruang yang tersedia */
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+        
+        /* DIV untuk Footer */
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+
+        <div class="header">
+            <h1>Portofolio Saya</h1>
+            <p>Layout Modern dengan DIV dan CSS Flexbox</p>
+        </div>
+
+        <div class="main-content">
+            <div class="content">
+                <h2>Tentang Saya</h2>
+                <p>Selamat datang di website portofolio saya. Halaman ini sepenuhnya dibuat menggunakan elemen `div` untuk struktur dan CSS Flexbox untuk tata letak. Metode ini menggantikan penggunaan `<table>` yang sudah usang untuk layout, menghasilkan kode yang lebih bersih dan responsif.</p>
+            </div>
+
+            <div class="sidebar">
+                <h3>Projek</h3>
+                <ul>
+                    <li>Website Perusahaan</li>
+                    <li>Aplikasi Mobile</li>
+                    <li>Desain Grafis</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>&copy; 2025 - Dibuat tanpa tabel.</p>
+        </div>
+
+    </div>
+
+</body>
+</html>
