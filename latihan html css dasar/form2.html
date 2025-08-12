@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #f4f4f4;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+        }
+        .container {
+            max-width: 500px;
+            width: 100%;
+        }
+        
+        .display-media {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .display-media img,
+        .display-media video {
+            max-width: 100%; 
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        form {
+            padding: 25px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input[type="text"],
+        input[type="password"],
+        input[type="file"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        .choice-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 15px;
+        }
+        .button-group {
+            margin-top: 20px;
+            text-align: right;
+        }
+        .btn {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 4px;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-submit {
+            background-color: #28a745;
+        }
+        .btn-reset {
+            background-color: #dc3545;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div class="display-media">
+            <img src="https://via.placeholder.com/500x200.png?text=Contoh+Foto" alt="Contoh gambar header" style="margin-bottom: 15px;">
+            
+            <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls></video>
+        </div>
+
+        <form>
+            <marquee behavior="scroll" direction="left" style="color: rgb(202, 53, 53); font-weight: bold;">
+                <h2>Selamat datang di Formulir Pendaftaran!</h2>
+            </marquee>            
+            <input type="hidden" name="user_id" value="12345">
+
+            <div class="form-group">
+                <label for="nama">Nama</label>
+                <input type="text" id="nama" name="nama">
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+            </div>
+
+            <div class="form-group">
+                <label for="alamat">Alamat</label>
+                <textarea id="alamat" name="alamat" rows="4"></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="berkas">Unggah Foto</label>
+                <input type="file" id="berkas" name="foto" accept="image/*">
+            </div>
+
+            <div class="form-group">
+                <label for="video-upload">Unggah Video</label>
+                <input type="file" id="video-upload" name="video" accept="video/*">
+            </div>
+
+            <div class="button-group">
+                <input type="reset" value="Reset" class="btn btn-reset">
+                <input type="submit" value="Submit" class="btn btn-submit">
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>
