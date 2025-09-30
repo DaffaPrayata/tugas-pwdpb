@@ -1,0 +1,74 @@
+<html>
+<head>
+<title>Menghitung Luas dan Keliling Persegi Panjang</title>
+<script type="text/javascript">
+     function hitungluaskeliling(){
+     panjang=document.getElementById("panjang").value;
+     lebar=document.getElementById("lebar").value;
+     luas=panjang*lebar;
+     keliling=(2*panjang)+(2*lebar);
+     document.getElementById("luas").value=luas;
+     document.getElementById("keliling").value=keliling;
+    }
+</script>
+<style type="text/css">
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    h4 {
+        color: #0000FF;
+    }
+    table {
+        margin-top: 10px;
+    }
+    td {
+        padding: 5px;
+    }
+    input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px; 
+        font-size: 14px;
+    }
+    input[type="button"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+    }
+    </style>
+</head>
+<body>
+   <form>
+    <h4>Menghitung Luas dan keliling Persegi Panjang</h4>
+      <table>
+         <tr>
+              <td>Panjang</td>
+              <td>:</td>
+              <td><input type="text" id="panjang" name="panjang"></td>
+         </tr>
+         <tr>
+              <td>Lebar</td>
+              <td>:</td>
+              <td><input type="text" id="lebar" name="lebar"></td>
+         </tr> 
+          <tr>
+              <td>Luas</td>
+              <td>:</td>
+              <td><input type="text"  id="luas" name="luas" disabled="true" size="5"></td>
+         </tr>
+          <tr>
+              <td>Keliling</td>
+              <td>:</td>
+              <td><input type="text"  id="keliling" name="keliling" disabled="true" size="5"></td>
+         </tr>
+         <tr>
+              <td></td>
+              <td></td>
+              <td><input type="button" value="hitung luas keliling" onClick="hitungluaskeliling()"></td>
+         </tr>
+        </table>
+    </form>
+</body>
+</html>

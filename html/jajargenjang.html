@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Menghitung Luas dan Keliling Jajar Genjang</title>
+<script type="text/javascript">
+     function hitungJajarGenjang(){
+         var alas = parseFloat(document.getElementById("alas").value);
+         var tinggi = parseFloat(document.getElementById("tinggi").value);
+         var sisiMiring = parseFloat(document.getElementById("sisiMiring").value);
+
+         var luas = alas * tinggi;
+         var keliling = 2 * (alas + sisiMiring);
+
+         document.getElementById("luas").value = luas;
+         document.getElementById("keliling").value = keliling;
+     }
+</script>
+<style type="text/css">
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+    }
+    h4 {
+        color: #0000FF;
+    }
+    table {
+        margin-top: 10px;
+    }
+    td {
+        padding: 5px;
+    }
+    input[type="text"] {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px; 
+        font-size: 14px;
+    }
+    input[type="button"] {
+        padding: 5px 10px;
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        cursor: pointer;
+    }
+</style>
+</head>
+<body>
+   <form>
+    <h4>Menghitung Luas dan Keliling Jajar Genjang</h4>
+      <table>
+         <tr>
+              <td>Alas</td>
+              <td>:</td>
+              <td><input type="text" id="alas" name="alas"></td>
+         </tr> 
+         <tr>
+              <td>Tinggi</td>
+              <td>:</td>
+              <td><input type="text" id="tinggi" name="tinggi"></td>
+         </tr>
+         <tr>
+              <td>Sisi Miring</td>
+              <td>:</td>
+              <td><input type="text" id="sisiMiring" name="sisiMiring"></td>
+         </tr>
+         <tr>
+              <td>Luas</td>
+              <td>:</td>
+              <td><input type="text" id="luas" name="luas" disabled></td>
+         </tr>
+         <tr>
+              <td>Keliling</td>
+              <td>:</td>
+              <td><input type="text" id="keliling" name="keliling" disabled></td>
+         </tr>
+         <tr>
+              <td></td>
+              <td></td>
+              <td><input type="button" value="Hitung" onClick="hitungJajarGenjang()"></td>
+         </tr>
+        </table>
+    </form>
+</body>
+</html>
